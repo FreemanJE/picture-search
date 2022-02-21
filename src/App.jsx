@@ -10,7 +10,6 @@ const App = () => {
     <main>
      <Header />
      <Content /> 
-     {/* <SearchForm />     */}
      <Footer />
     </main>
   );
