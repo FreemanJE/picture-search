@@ -1,26 +1,47 @@
 import React from 'react'
 import { useContext } from 'react';
-// import { createContext } from 'react'
 import MyContext from '../context/MyContext'
+import SearchForm from './SearchForm'
+import PreviousArrow from '../assets/previousArrow.png'
+import NextArrow from '../assets/nextArrow.png'
 
 
 const Content = () => {
-    const {extra, data} = useContext(MyContext);
-    const { results, loading, errors } = data
+  const { search, data, page, imageList, previousPage, nextPage } = useContext(MyContext);
 
-    if (loading) return <p>Loading....</p>
-    if (errors) return <p>Error</p>
-
-    const list = results.map((user) =>
-    extra ? (
-      <p key={user.id} className="extra">
-        {user.name}
-      </p>
-    ) : (
-      <p key={user.id}>{user.address.street}</p>
-    ))
   return (
-    <section>{list}</section>
+    <div id='input'>
+      <i><h2 style={{ color: 'blue' }} >Images of {search}</h2></i>
+      <SearchForm />
+
+      <div>
+        <p style={{ fontSize: '20px' }} >Page: {page} of {data.results.total_pages}
+
+          {page > 1 && <button className='prevBtn' onClick={previousPage}>
+            <img style={{ width: '100px', height: '60px' }} src={PreviousArrow} alt='' /> </button>}
+
+          {page < data.results.total_pages && <button className='prevBtn' onClick={nextPage}>
+            <img style={{ width: '80px', height: '60px' }} src={NextArrow} alt='' /> </button>}
+
+        </p>
+      </div>
+      <div className='image'>
+        {imageList}
+      </div>
+
+      {/* <div>
+        <p>Page: {page} of {data.results.total_pages} </p>
+      </div> */}
+
+      {console.log(page)}
+      {/* {page > 1 && <button onClick={previousPage}>
+        <img className='prevBtn' style={{ width: '100px', height: '60px' }} src={PreviousArrow} alt='' />
+      </button>}
+      {page < data.results.total_pages && <button  onClick={nextPage}>Next</button>} */}
+      {/* <Cleanup /> */}
+
+      {/* <img src={PreviousArrow} alt='' /> */}
+    </div>
   )
 }
 

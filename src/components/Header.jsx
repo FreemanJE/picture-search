@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <header>
       <h1>{headerText}</h1>
-      <button onClick={() => setExtra(!extra)}>Extra</button>
+      {/* <button onClick={() => setExtra(!extra)}>Extra</button> */}
     </header>
   );
 };
