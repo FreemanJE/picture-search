@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/picture-search/static/css/main.f6b75915.css",
+    "main.js": "/picture-search/static/js/main.bac75333.js",
+    "static/media/nextArrow.png": "/picture-search/static/media/nextArrow.c88f79a618a02cf72bfb.png",
+    "static/media/previousArrow.png": "/picture-search/static/media/previousArrow.44babf11993f9cea9a55.png",
+    "index.html": "/picture-search/index.html",
+    "main.f6b75915.css.map": "/picture-search/static/css/main.f6b75915.css.map",
+    "main.bac75333.js.map": "/picture-search/static/js/main.bac75333.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f6b75915.css",
+    "static/js/main.bac75333.js"
+  ]
+}
