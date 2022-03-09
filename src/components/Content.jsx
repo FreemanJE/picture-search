@@ -11,7 +11,7 @@ const Content = () => {
 
   return (
     <div id='input'>
-      <i><h2 style={{ color: 'blue' }} >Images of {search}</h2></i>
+      <i><h2 style={{ color: 'blue', marginTop: '30px' }} >Images of {search}</h2></i>
       <SearchForm />
 
       <div>

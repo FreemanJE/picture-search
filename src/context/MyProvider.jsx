@@ -11,6 +11,8 @@ const MyProvider = ({ children }) => {
   const [searchInput, setSearchInput] = useState("");
   const [page, setPage] = useState(1)
   const headerText = "Etukas World Pictures";
+  const refData = {text: "Images from Unsplash.com", url: 'unsplash.com'}
+  const refData2 = '(used purely for learning purposes)'
   const footerText = "@ EtukasCodes 2022";
 
   const inputRef = useRef()
@@ -60,7 +62,7 @@ const MyProvider = ({ children }) => {
   return (
     <MyContext.Provider
 
-      value={{ data, setData, search, setSearch, searchInput, setSearchInput, page, setPage, headerText, footerText, imageList, submitHandler, previousPage, nextPage, inputRef }}
+      value={{ data, setData, search, setSearch, searchInput, setSearchInput, page, setPage, headerText, footerText, imageList, submitHandler, previousPage, nextPage, inputRef, refData, refData2 }}
     >
       {children}
     </MyContext.Provider>
