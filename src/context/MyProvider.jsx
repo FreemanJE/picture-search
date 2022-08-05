@@ -55,7 +55,7 @@ const MyProvider = ({ children }) => {
   const imageList = data.results.results.map((image) => (
     <div className="cards">
       <img className='picture' key={image.id} src={image.urls.thumb} alt={image.alt_description} style={{ width: "80%", objectFit: "cover" }} />
-      <p className="description" style={{ width: "100%" }}>{image.alt_description} </p>
+      <p className="description" >{image.alt_description} </p>
     </div>
   ));
 

@@ -40,8 +40,11 @@ input {
 .prevBtn {
   border: none;
   margin: 5px 50px;
-  width: 100px;
+  /* width: 100px; */
   height: 60px
+}
+.cards {
+
 }
 .picture {
   height: 200px; 

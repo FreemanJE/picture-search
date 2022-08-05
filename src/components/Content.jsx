@@ -27,20 +27,8 @@ const Content = () => {
       </div>
       <div className='image'>
         {imageList}
-      </div>
-
-      {/* <div>
-        <p>Page: {page} of {data.results.total_pages} </p>
-      </div> */}
-
-      {console.log(page)}
-      {/* {page > 1 && <button onClick={previousPage}>
-        <img className='prevBtn' style={{ width: '100px', height: '60px' }} src={PreviousArrow} alt='' />
-      </button>}
-      {page < data.results.total_pages && <button  onClick={nextPage}>Next</button>} */}
-      {/* <Cleanup /> */}
-
-      {/* <img src={PreviousArrow} alt='' /> */}
+      </div>      
+      {console.log(page)}      
     </div>
   )
 }
